@@ -894,6 +894,11 @@ textarea {
 }
 
 @media (max-width: 900px) {
+    .site-header {
+        position: relative;
+        z-index: 70;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -903,6 +908,7 @@ textarea {
         top: calc(100% + 1px);
         left: 0;
         right: 0;
+        z-index: 80;
         background: var(--bg-header);
         border-bottom: 1px solid var(--line);
         box-shadow: var(--shadow-soft);
