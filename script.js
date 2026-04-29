@@ -19,6 +19,13 @@
 
         slides.forEach(function (slide, slideIndex) {
             slide.classList.toggle("is-active", slideIndex === currentSlide);
+            const title = slide.querySelector(".hero-title");
+
+            if (title) {
+                title.style.animation = "none";
+                void title.offsetWidth;
+                title.style.animation = "";
+            }
         });
 
         dots.forEach(function (dot, dotIndex) {

@@ -8,14 +8,13 @@
     <link rel="icon" type="image/png" href="imagen/icono.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@600&family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="topbar">
         <div class="container topbar-inner">
             <div class="topbar-item">
-                
                 <span>PROYECTOS DE INGENIERÍA Y ARQUITECTURA</span>
             </div>
             <div class="topbar-links">
@@ -63,28 +62,36 @@
             <div class="hero-track">
                 <article class="hero-slide is-active" style="background-image: linear-gradient(rgba(7, 16, 27, 0.42), rgba(7, 16, 27, 0.42)), url('https://centinel-ingenieros.com/wp-content/uploads/2021/12/TOPOGRAFIA.jpg');">
                     <div class="hero-caption">
-                        <h2>TOPOGRAFÍA Y GEODESIA</h2>
+                        <h2 class="hero-title">TOPOGRAFÍA Y GEODESIA</h2>
                     </div>
                 </article>
                 <article class="hero-slide" style="background-image: linear-gradient(rgba(7, 16, 27, 0.42), rgba(7, 16, 27, 0.42)), url('https://centinel-ingenieros.com/wp-content/uploads/2021/12/saneamiento.jpg');">
                     <div class="hero-caption">
-                        <h2>SANEAMIENTO FÍSICO LEGAL</h2>
+                        <h2 class="hero-title">SANEAMIENTO FÍSICO LEGAL</h2>
                     </div>
                 </article>
                 <article class="hero-slide" style="background-image: linear-gradient(rgba(7, 16, 27, 0.42), rgba(7, 16, 27, 0.42)), url('https://centinel-ingenieros.com/wp-content/uploads/2021/12/riesgo-y-catastrofe.jpg');">
                     <div class="hero-caption">
-                        <h2>GESTIÓN DE RIESGO DE DESASTRES</h2>
+                        <h2 class="hero-title">GESTIÓN DE RIESGO DE DESASTRES</h2>
                     </div>
                 </article>
                 <article class="hero-slide" style="background-image: linear-gradient(rgba(7, 16, 27, 0.42), rgba(7, 16, 27, 0.42)), url('https://centinel-ingenieros.com/wp-content/uploads/2021/12/seguimiento-obra-con-drones-peru-1.jpg');">
                     <div class="hero-caption">
-                        <h2>FOTOGRAMETRÍA</h2>
+                        <h2 class="hero-title">FOTOGRAMETRÍA</h2>
                     </div>
                 </article>
             </div>
 
-            <button class="slider-arrow prev" id="hero-prev" aria-label="Anterior">&#8249;</button>
-            <button class="slider-arrow next" id="hero-next" aria-label="Siguiente">&#8250;</button>
+            <button class="slider-arrow prev" id="hero-prev" aria-label="Anterior">
+                <span class="slider-arrow-ring" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false"><path d="M14.71 6.29a1 1 0 0 1 0 1.41L10.41 12l4.3 4.29a1 1 0 0 1-1.42 1.42l-5-5a1 1 0 0 1 0-1.42l5-5a1 1 0 0 1 1.42 0Z"/></svg>
+                </span>
+            </button>
+            <button class="slider-arrow next" id="hero-next" aria-label="Siguiente">
+                <span class="slider-arrow-ring" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false"><path d="M9.29 17.71a1 1 0 0 1 0-1.41L13.59 12l-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 0 1.42l-5 5a1 1 0 0 1-1.42 0Z"/></svg>
+                </span>
+            </button>
 
             <div class="slider-dots">
                 <button class="dot is-active" data-slide="0" aria-label="Ir a diapositiva 1"></button>
