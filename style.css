@@ -460,28 +460,6 @@ textarea {
     transform: scale(1.04);
 }
 
-.service-date {
-    position: absolute;
-    left: 18px;
-    bottom: 18px;
-    width: 58px;
-    height: 58px;
-    background: var(--white);
-    color: var(--dark-strong);
-    display: grid;
-    place-items: center;
-    font-size: 0.86rem;
-    line-height: 1;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16);
-}
-
-.service-date span {
-    display: block;
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin-top: 7px;
-}
-
 .service-body {
     padding: 24px 24px 28px;
 }
