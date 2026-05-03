@@ -84,12 +84,12 @@
 
             <button class="slider-arrow prev" id="hero-prev" aria-label="Anterior">
                 <span class="slider-arrow-ring" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false"><path d="M14.71 6.29a1 1 0 0 1 0 1.41L10.41 12l4.3 4.29a1 1 0 0 1-1.42 1.42l-5-5a1 1 0 0 1 0-1.42l5-5a1 1 0 0 1 1.42 0Z"/></svg>
+                    <svg viewBox="0 0 24 24" focusable="false"><path d="M15 6l-6 6 6 6"/></svg>
                 </span>
             </button>
             <button class="slider-arrow next" id="hero-next" aria-label="Siguiente">
                 <span class="slider-arrow-ring" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false"><path d="M9.29 17.71a1 1 0 0 1 0-1.41L13.59 12l-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 0 1.42l-5 5a1 1 0 0 1-1.42 0Z"/></svg>
+                    <svg viewBox="0 0 24 24" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
                 </span>
             </button>
 
@@ -122,43 +122,78 @@
                     <p>Contamos con un equipo de profesionales especializados para cada una de las áreas de: Topografía, Geotecnia, Fotogrametría, Gestión Predial y Saneamiento, Gestión Territorial y Planeamiento Urbano.</p>
                 </div>
 
-                <div class="services-grid">
-                    <article class="service-card">
-                        <div class="service-media">
-                            <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/TOPOGRAFIA-700x400.jpg" alt="Topografía y geodesia">
+                <div class="services-carousel" aria-label="Carrusel de servicios">
+                    <button class="slider-arrow prev" id="services-prev" aria-label="Servicio anterior">
+                        <span class="slider-arrow-ring" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><path d="M15 6l-6 6 6 6"/></svg>
+                        </span>
+                    </button>
+
+                    <div class="services-viewport">
+                        <div class="services-track">
+                            <article class="service-card">
+                                <div class="service-media">
+                                    <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/TOPOGRAFIA-700x400.jpg" alt="Topografía y geodesia">
+                                    <span class="service-hover-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false"><path d="M10.5 4a6.5 6.5 0 1 0 4.17 11.49l3.92 3.92 1.41-1.41-3.92-3.92A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg>
+                                    </span>
+                                    <span class="service-hover-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                </div>
+                                <div class="service-body">
+                                    <h3>TOPOGRAFÍA Y GEODESIA</h3>
+                                </div>
+                            </article>
+                            <article class="service-card">
+                                <div class="service-media">
+                                    <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/saneamiento-700x400.jpg" alt="Saneamiento físico legal">
+                                    <span class="service-hover-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false"><path d="M10.5 4a6.5 6.5 0 1 0 4.17 11.49l3.92 3.92 1.41-1.41-3.92-3.92A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg>
+                                    </span>
+                                    <span class="service-hover-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                </div>
+                                <div class="service-body">
+                                    <h3>SANEAMIENTO FÍSICO LEGAL</h3>
+                                </div>
+                            </article>
+                            <article class="service-card">
+                                <div class="service-media">
+                                    <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/riesgo-y-catastrofe-700x400.jpg" alt="Gestión de riesgo de desastres">
+                                    <span class="service-hover-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false"><path d="M10.5 4a6.5 6.5 0 1 0 4.17 11.49l3.92 3.92 1.41-1.41-3.92-3.92A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg>
+                                    </span>
+                                    <span class="service-hover-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                </div>
+                                <div class="service-body">
+                                    <h3>GESTIÓN DE RIESGO DE DESASTRES</h3>
+                                </div>
+                            </article>
+                            <article class="service-card">
+                                <div class="service-media">
+                                    <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/seguimiento-obra-con-drones-peru-1-700x400.jpg" alt="Fotogrametría">
+                                    <span class="service-hover-icon" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false"><path d="M10.5 4a6.5 6.5 0 1 0 4.17 11.49l3.92 3.92 1.41-1.41-3.92-3.92A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg>
+                                    </span>
+                                    <span class="service-hover-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+                                </div>
+                                <div class="service-body">
+                                    <h3>FOTOGRAMETRÍA</h3>
+                                </div>
+                            </article>
                         </div>
-                        <div class="service-body">
-                            <h3>TOPOGRAFÍA Y GEODESIA</h3>
-                            <p>Servicios topográficos y geodésicos en obras públicas y privadas, levantamientos, nivelaciones y control de obras.</p>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-media">
-                            <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/saneamiento-700x400.jpg" alt="Saneamiento físico legal">
-                        </div>
-                        <div class="service-body">
-                            <h3>SANEAMIENTO FÍSICO LEGAL</h3>
-                            <p>Regularización, catastro, independización, acumulación, declaratoria y gestión de documentación técnica predial.</p>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-media">
-                            <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/riesgo-y-catastrofe-700x400.jpg" alt="Gestión de riesgo de desastres">
-                        </div>
-                        <div class="service-body">
-                            <h3>GESTIÓN DE RIESGO DE DESASTRES</h3>
-                            <p>Evaluación, prevención, mitigación y formulación de instrumentos técnicos orientados a la seguridad territorial.</p>
-                        </div>
-                    </article>
-                    <article class="service-card">
-                        <div class="service-media">
-                            <img src="https://centinel-ingenieros.com/wp-content/uploads/2021/12/seguimiento-obra-con-drones-peru-1-700x400.jpg" alt="Fotogrametría">
-                        </div>
-                        <div class="service-body">
-                            <h3>FOTOGRAMETRÍA</h3>
-                            <p>Levantamientos aerofotogramétricos, inspección con drones y seguimiento de obras con captura aérea de alta precisión.</p>
-                        </div>
-                    </article>
+                    </div>
+
+                    <div class="services-dots" aria-label="Posiciones del carrusel de servicios">
+                        <button class="dot is-active" type="button" data-service-slide="0" aria-label="Ir a la posición 1"></button>
+                        <button class="dot" type="button" data-service-slide="1" aria-label="Ir a la posición 2"></button>
+                        <button class="dot" type="button" data-service-slide="2" aria-label="Ir a la posición 3"></button>
+                        <button class="dot" type="button" data-service-slide="3" aria-label="Ir a la posición 4"></button>
+                    </div>
+
+                    <button class="slider-arrow next" id="services-next" aria-label="Servicio siguiente">
+                        <span class="slider-arrow-ring" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
+                        </span>
+                    </button>
                 </div>
 
                 <div class="company-actions center-actions">

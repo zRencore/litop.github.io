@@ -273,17 +273,51 @@ textarea {
     animation: heroCaptionIn 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
+@keyframes companyCopyIn {
+    0% {
+        opacity: 0;
+        transform: translate3d(-110vw, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 .slider-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 76px;
-    height: 76px;
+    width: 45px;
+    height: 45px;
     border: 0;
     background: transparent;
     color: var(--white);
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.services-carousel .slider-arrow {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.services-carousel:hover .slider-arrow,
+.services-carousel:focus-within .slider-arrow {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media (hover: none) {
+    .services-carousel .slider-arrow {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
 }
 
 .slider-arrow:hover {
@@ -297,24 +331,28 @@ textarea {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background:
-        radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04)),
-        rgba(17, 25, 36, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(12px);
-    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    background: rgba(47, 43, 46, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .slider-arrow:hover .slider-arrow-ring {
-    border-color: rgba(0, 191, 111, 0.65);
-    box-shadow: 0 22px 40px rgba(0, 0, 0, 0.24);
+    background: rgba(47, 43, 46, 1);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .slider-arrow svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     fill: currentColor;
+}
+
+.slider-arrow path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .slider-arrow.prev {
@@ -323,6 +361,32 @@ textarea {
 
 .slider-arrow.next {
     right: 24px;
+}
+
+.services-carousel .slider-arrow.prev {
+    left: 0;
+}
+
+.services-carousel .slider-arrow.next {
+    right: 0;
+}
+
+.services-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.services-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(47, 43, 46, 0.28);
+}
+
+.services-dots .dot.is-active {
+    background: var(--primary);
 }
 
 .slider-dots {
@@ -365,11 +429,16 @@ textarea {
     padding: 88px 0;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 .company-grid {
     display: grid;
     grid-template-columns: minmax(0, 680px);
+}
+
+.company-copy {
+    animation: companyCopyIn 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .eyebrow {
@@ -411,7 +480,7 @@ textarea {
     justify-content: center;
     min-height: 48px;
     padding: 0 24px;
-    border-radius: 999px;
+    border-radius: 12px;
     border: 1px solid transparent;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -472,6 +541,30 @@ textarea {
     margin: 0 auto;
 }
 
+.services-carousel {
+    position: relative;
+    padding-inline: 64px;
+    --services-visible: 3;
+    --services-gap: 22px;
+}
+
+.services-viewport {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.services-track {
+    display: flex;
+    gap: var(--services-gap);
+    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+}
+
+.services-track .service-card {
+    flex: 0 0 calc((100% - (var(--services-gap) * (var(--services-visible) - 1))) / var(--services-visible));
+    max-width: calc((100% - (var(--services-gap) * (var(--services-visible) - 1))) / var(--services-visible));
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -479,10 +572,12 @@ textarea {
 }
 
 .service-card {
-    background: var(--white);
+    background: linear-gradient(180deg, #ffffff 0%, #fcfcfc 100%);
     box-shadow: var(--shadow);
     color: var(--text-main);
     border: 1px solid rgba(183, 176, 180, 0.28);
+    border-radius: 12px;
+    overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -496,33 +591,97 @@ textarea {
     overflow: hidden;
 }
 
+.service-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(47, 43, 46, 0.08), rgba(47, 43, 46, 0.45));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
 .service-media img {
-    aspect-ratio: 7 / 4;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
 .service-card:hover .service-media img {
     transform: scale(1.04);
+    filter: brightness(0.8) contrast(1.08);
+}
+
+.service-card:hover .service-media::after {
+    opacity: 1;
+}
+
+.service-hover-icon,
+.service-hover-dots {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    pointer-events: none;
+}
+
+.service-hover-icon {
+    top: 14px;
+    left: 14px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(47, 43, 46, 0.72);
+    color: var(--white);
+}
+
+.service-hover-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.service-hover-dots {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.96);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-hover-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 1px rgba(47, 43, 46, 0.22);
 }
 
 .service-body {
-    padding: 24px 24px 28px;
+    padding: 18px 18px 20px;
+    text-align: center;
+    background: var(--white);
 }
 
 .service-body h3 {
     font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    line-height: 1.35;
-    margin-bottom: 12px;
-    letter-spacing: 0.03em;
+    font-size: 0.98rem;
+    line-height: 1.3;
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
     color: var(--dark-strong);
+    text-transform: uppercase;
 }
 
-.service-body p {
-    color: var(--text-muted);
-    font-size: 0.94rem;
-    line-height: 1.7;
+.service-card:hover .service-hover-icon,
+.service-card:hover .service-hover-dots {
+    opacity: 1;
+}
+
+.service-card:hover .service-hover-icon {
+    transform: scale(1.02);
 }
 
 .about-band {
@@ -915,6 +1074,11 @@ textarea {
     .services-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+
+    .services-carousel {
+        padding-inline: 52px;
+        --services-gap: 18px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -968,6 +1132,12 @@ textarea {
 
     .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-carousel {
+        padding-inline: 46px;
+        --services-visible: 2;
+        --services-gap: 18px;
     }
 
     .about-grid,
@@ -1031,6 +1201,28 @@ textarea {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .services-carousel {
+        padding-inline: 0;
+        --services-visible: 1;
+        --services-gap: 16px;
+    }
+
+    .services-viewport {
+        border-radius: 22px;
+    }
+
+    .services-points-button {
+        bottom: 14px;
+    }
+
+    .service-body {
+        padding: 16px 14px 18px;
+    }
+
+    .service-body h3 {
+        font-size: 0.92rem;
     }
 
     .contact-panel,
