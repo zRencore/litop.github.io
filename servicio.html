@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio | Constructora Litop</title>
+    <meta name="description" content="Detalle del servicio de Constructora Litop.">
+    <link rel="icon" type="image/png" href="imagen/icono.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@600&family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <div class="topbar-item">
+                <span>PROYECTOS DE INGENIERÍA Y ARQUITECTURA</span>
+            </div>
+            <div class="topbar-links">
+                <a class="topbar-link" href="tel:+51935383207">
+                    <span class="topbar-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.11.37 2.3.56 3.58.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.3 21 3 13.7 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.28.19 2.47.56 3.58a1 1 0 0 1-.25 1.01l-2.19 2.2Z"/></svg>
+                    </span>
+                    <span>Cel.: 935 383 207</span>
+                </a>
+                <a class="topbar-link" href="mailto:informes@litop.com">
+                    <span class="topbar-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false"><path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2v.2l8 5.33 8-5.33V8H4Zm16 8V10.6l-7.45 4.97a1 1 0 0 1-1.1 0L4 10.6V16h16Z"/></svg>
+                    </span>
+                    <span>informes@litop.com</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-logo" src="imagen/logonombre.png" alt="Constructora Litop">
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a class="is-current" href="nuestros-servicios.html">Nuestros Servicios</a></li>
+                    <li><a href="contacto.html">Contáctenos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main data-service-detail>
+        <section class="service-detail-hero" id="service-hero">
+        </section>
+
+        <section class="service-detail-section">
+            <div class="container">
+                <article class="service-detail-article">
+                    <h1 id="service-title" class="service-detail-title">Servicio</h1>
+                    <p id="service-intro" class="service-detail-intro"></p>
+
+                    <div class="service-gallery" id="service-gallery"></div>
+
+                    <ul class="service-bullets" id="service-bullets"></ul>
+
+                    <div class="single-post-navigation">
+                        <div class="blog-posts-nav-btn prev-btn">
+                            <div class="posts-nav-inner">
+                                <a id="service-prev" href="#" aria-label="Servicio anterior">
+                                    <span class="nav-arrow-circle" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false"><path d="M15 6l-6 6 6 6"/></svg>
+                                    </span>
+                                    <span class="posts-nav-copy">
+                                        <span class="btn-label">Newer</span>
+                                        <span id="service-prev-label" class="post-title">Anterior</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="back-to-archive">
+                            <a href="nuestros-servicios.html" aria-label="Volver a Nuestros Servicios">
+                                <span class="archive-grid" aria-hidden="true">
+                                    <span></span><span></span><span></span><span></span>
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="blog-posts-nav-btn next-btn">
+                            <div class="posts-nav-inner">
+                                <a id="service-next" href="#" aria-label="Servicio siguiente">
+                                    <span class="posts-nav-copy">
+                                        <span class="btn-label">Older</span>
+                                        <span id="service-next-label" class="post-title">Siguiente</span>
+                                    </span>
+                                    <span class="nav-arrow-circle" aria-hidden="true">
+                                        <svg viewBox="0 0 24 24" focusable="false"><path d="M9 6l6 6-6 6"/></svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© 2026 Constructora Litop. Proyectos de Ingeniería y Arquitectura.</p>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="nuestros-servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <a class="floating-contact" href="https://wa.me/51935383207" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <img src="imagen/icono.png" alt="Icono Constructora Litop">
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
