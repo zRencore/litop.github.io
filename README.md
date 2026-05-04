@@ -58,6 +58,8 @@ Contiene todos los estilos globales del sitio:
 - footer
 - responsive
 
+La identidad visual actual usa una línea sobria con verde corporativo, gris oscuro y fondos neutros.
+
 ### `script.js`
 
 Controla las interacciones básicas:
@@ -75,6 +77,8 @@ Incluye:
 - horarios de atención
 - formulario
 - ubicación física con Google Maps
+
+Las páginas `quienes-somos.html`, `nuestros-servicios.html` y `contacto.html` usan una cabecera visual estática superior sin texto encima; el título de cada sección aparece en el bloque siguiente.
 
 ## Guía rápida de edición
 
@@ -119,6 +123,7 @@ Revisar principalmente:
 - menú hamburguesa en pantallas pequeñas
 - botón flotante de contacto por WhatsApp
 - mapa embebido en la página de contacto
+- cabeceras estáticas para las páginas internas principales
 
 ## Recomendaciones de mantenimiento
 
